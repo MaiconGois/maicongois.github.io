@@ -13,7 +13,10 @@ body {
     align-items: center;
 
 }
-
+.logoimg{
+    width: 108px;
+    height: 35px;
+}
 header {
     top: 0;
     background-color: black;
@@ -39,7 +42,6 @@ nav a {
 
 nav a:hover {
     color: rgba(255, 255, 255, 0.812);
-    text-decoration: solid;
 }
 
 .button {
