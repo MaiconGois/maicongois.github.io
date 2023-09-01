@@ -8,7 +8,7 @@ body {
     font-size: 15px;
     line-height: 1.5;
     font-family: "Lato", sans-serif;
-    background-color: #f0f0f0;
+    background-color: #e3f5b7;
     justify-content: center;
     align-items: center;
 
@@ -155,7 +155,7 @@ section{
   }
 
   .cardBox {
-    background-color: #fff;
+    background-color: #fce7d2;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 20px;
@@ -180,7 +180,7 @@ section{
   }
 
   .black-ground .cardBox{
-    background-color: white;
+    background-color: #fce7d2;
     color: black;
   }
 
@@ -199,3 +199,9 @@ section{
   #logo{
     font-size: 1.7em;
   }
+  .icones img{
+    height: 50px;
+    padding: 15px;
+  }
+
+  
