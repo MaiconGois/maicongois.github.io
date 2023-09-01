@@ -8,6 +8,6 @@ Este site atua como um registro pessoal do meu crescimento profissional. Permite
 
 Meu site é direcionado a recrutadores, colegas buscando colaborações, estudantes em busca de orientação, a comunidade de desenvolvimento, potenciais clientes e todos interessados em minha área específica.
 
-## Quais as futuras modificações/adições eu planejo realizar no meu site?
+## Quais as futuras modificações/adições que eu planejo realizar no meu site?
 
 Minha intenção é persistir na incorporação de uma variedade de projetos que não só evidenciam minha evolução e o desenvolvimento de novas habilidades, mas também expandir a experiência dos visitantes ao introduzir elementos interativos que estimulam maior envolvimento.
