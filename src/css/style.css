@@ -117,7 +117,9 @@ h2 {
 
 .justify{
     text-align: justify;
+    font-size: 20px;
 }
+
 
 .center {
     text-align: center;
