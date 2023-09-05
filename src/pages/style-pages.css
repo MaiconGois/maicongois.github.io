@@ -1,0 +1,39 @@
+.corDeFundo{
+    background-color: rgb(180, 185, 185);
+    
+}
+
+.pdrDiv{
+    
+    background-color: rgb(238, 226, 211);
+    float: right;
+    margin-right: 250px;
+    margin-left: 250px;
+    margin-bottom: 25px;
+    display: flex;
+    text-align: center;
+    align-items:center;
+    border-radius: 25px;
+    padding: 12px;
+    font-size: 20px;
+}
+
+.img{
+    width: 200px;
+    margin-left: 0px;
+    padding: 12px;
+    padding-right: 25px;
+    border-radius: 10px;
+
+}
+h1,
+h2, h3, h4{
+    text-align: center;
+    font-size: 30px;
+    font-family: "Lato", sans-serif;
+   padding-top: 100px;
+   
+}
+b{
+    font-size: 50px;
+}
