@@ -113,7 +113,15 @@ h3{
 }
 .teste{
     height: 590px;
-    width: 990px;
+    width: 1000px;
+    background-color: rgb(197 175 151);
+    border-radius: 35px;
+    margin-top: 45px;
+    margin-left: 10%;
+}
+.teste_1{
+    height: 720px;
+    width: 1000px;
     background-color: rgb(197 175 151);
     border-radius: 35px;
     margin-top: 45px;
