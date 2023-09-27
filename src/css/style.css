@@ -170,6 +170,11 @@ section{
     flex-shrink: 1;
     
   }
+  
+  .cardBox1{
+   width: 100%;
+   height: 350px; 
+  }
 
 
   .btn-card {
@@ -204,9 +209,49 @@ section{
   #logo{
     font-size: 1.7em;
   }
+  
   .icones img{
     height: 90px;
     padding: 15px;
   }
 
-  
+  #imagemArtigo1, #imagemArtigo2, #imagemArtigo3 {
+    width: 100%;
+    height: 400px; 
+    background-image: url(../imagens/filme.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+#imagemArtigo2{
+  background-image: url(../imagens/musica.png);
+}
+#imagemArtigo3{
+  background-image: url(../imagens/series.png);
+ 
+}
+
+#carouselExampleCaptions{
+  height: 400px;
+  background-color: aqua;
+}
+
+#carousel-inner{
+  height: 400px;
+}
+#artigos{
+  margin-top: 0;
+  height: 400px;
+}
+
+#contato{
+  margin-top: 0;
+}
+.cortext1{
+  color: #ddb99d;
+}
+.cortext3{
+  color: #e6cbb6;
+}
