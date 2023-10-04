@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Soma</title>
+</head>
+<body>
+    <h1>Verificar a sua idade</h1>
+    <input type="text" placeholder="Digite a sua idade" id="idade">
+    <button onclick="salvar()">Salvar</button>
+    <p id="resultidade"></p>
+
+    <script>
+        //Atividade 1
+        function salvar(){
+            let idade = document.getElementById('idade').value;
+
+            if(idade<18){
+            document.getElementById('resultidade').innerText = "Você é menor de idade";
+            } else if(idade >= 18 && idade <= 64){
+                document.getElementById('resultidade').innerText = "Você já é um adulto"
+            }else{
+                document.getElementById('resultidade').innerText = "Você já é um idoso"
+            }  
+            
+        }
+    </script>
+        
+    <h1>Comparação dos valores</h1>
+    <input type="text" placeholder="Digite o primeiro valor" id="valor1">
+    <input type="text" placeholder="Digite o segundo valor" id="valor2">
+    <button onclick="salvar1()">Salvar</button>
+    <p id="resultcomparacao"></p>
+
+    <script>
+        //Atividade 2
+        function salvar1(){
+            let valor1 = document.getElementById('valor1').value;
+            let valor2 = document.getElementById('valor2').value;
+
+            if(valor1 > valor2){
+                document.getElementById('resultcomparacao').innerText = "Esse valor é o maior " + valor1
+            }else if(valor1 < valor2){
+                document.getElementById('resultcomparacao').innerText = "Esse valor é o maior " + valor2
+            }else{
+                document.getElementById('resultcomparacao').innerText = "Os valores são iguais"
+            }
+
+        }
+
+
+    </script>
+
+    <h1>Verificação se os valores são divisível</h1>
+    <input type="text" placeholder="Digite o primeiro número" id="n1">
+    <input type="text" placeholder="Digite o segundo número" id="n2">
+    <button onclick="salvar2()">Salvar</button>
+    <p id="resultdivisao"></p>
+    <script>
+        //Atividade 3
+        function salvar2(){
+
+            let n1 = document.getElementById('n1').value;
+            let n2 = document.getElementById('n2').value;
+            let divisao = n1 % n2;
+
+            if(divisao === 0){
+                document.getElementById('resultdivisao').innerText = "Esse valor é divisível"
+
+            }else{
+                document.getElementById('resultdivisao').innerText = "Esse valor não é divisível"
+            }
+
+        }
+    </script>
+
+<h1>Verificação de temperatura</h1>
+<input type="text" placeholder="Digite a temperatura atual" id="t">
+<button onclick="salvar3()">Salvar</button>
+<p id="resulttemperatura"></p>   
+
+<script>
+//Atividade 4
+function salvar3(){
+    let t = document.getElementById('t').value;
+
+    if(t <= 17.9){
+        document.getElementById('resulttemperatura').innerText = "A temperatura está muito Frio"
+    }else if(t<= 26.9 && t>= 18){
+        document.getElementById('resulttemperatura').innerText = "Está a uma temperatura agradável"
+    }else{
+        document.getElementById('resulttemperatura').innerText = "A temperatura está muito quente"
+    }
+}
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
