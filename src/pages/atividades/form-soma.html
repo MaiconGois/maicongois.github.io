@@ -95,9 +95,71 @@ function salvar3(){
     }
 }
 
+</script>
+<h1>Cálculo do fatorisl de um número</h1>
+<input type="text" placeholder="Digite um número" id="fatorial">
+<button onclick="salvar4()">Salvar</button>
+<p id="resultfatorial"></p>   
 
+<script>
+
+
+
+//Atividade 6
+function salvar4(){
+    let n = document.getElementById('fatorial').value;
+    let resultfatorial = n;
+    for(let i = 1; i< n; i++){
+        resultfatorial = resultfatorial * i;   
+    }
+    document.getElementById('resultfatorial').innerText = resultfatorial
+    
+}
 
 </script>
+<h1>Contagem regressiva</h1>
+<input type="text" placeholder="Digite um número" id="contagem">
+<button onclick="salvar5()">Salvar</button>
+<p id="resultcontagem"></p>   
+
+<script>
+
+
+
+
+//Atividade 7
+function salvar5(){
+    let n = document.getElementById('contagem').value;
+    let resultfatorial = 0;
+    
+    while(resultfatorial != 1){
+resultfatorial = n--
+
+        document.getElementById('resultcontagem').innerHTML += resultfatorial + " - "
+    } 
+    
+}
+
+</script>
+<h1>Tabuada de multiplicação</h1>
+<input type="text" placeholder="Digite um número" id="tabuada">
+<button onclick="salvar6()">Salvar</button>
+<p id="resulttabuada"></p>   
+
+<script>
+//Atividade 8
+function salvar6(){
+    let n = document.getElementById('tabuada').value;
+    let resulttabuada = " ";
+    for(let i = 1; i <= 10; i ++){
+        document.getElementById('resulttabuada').innerHTML = 
+        resulttabuada += n + " * "+ i + " = "+ n * i + "<br>"
+    }
+    
+    
+}
+</script>
+
 
 
 
