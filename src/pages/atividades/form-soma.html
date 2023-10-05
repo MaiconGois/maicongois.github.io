@@ -180,6 +180,22 @@
             <th id="media"></th>
             <th id="situacao"></th>
         </tr>
+        <tr>
+            <th scope="row"> História</th>
+            <th><input type="text" placeholder="Digite nota" id="nota4"></th>
+            <th><input type="text" placeholder="Digite nota" id="nota5"></th>
+            <th><input type="text" placeholder="Digite nota" id="nota6"></th>
+            <th id="media"></th>
+            <th id="situacao"></th>
+        </tr>
+        <tr>
+            <th scope="row"> Geografia</th>
+            <th><input type="text" placeholder="Digite nota" id="nota7"></th>
+            <th><input type="text" placeholder="Digite nota" id="nota8"></th>
+            <th><input type="text" placeholder="Digite nota" id="nota9"></th>
+            <th id="media"></th>
+            <th id="situacao"></th>
+        </tr>
         <div class="salvar"><button onclick="salvar7()">Salvar</button></div>
         <script>
             function salvar7() {
@@ -187,7 +203,7 @@
                 let n2 = parseFloat(document.getElementById('nota2').value)
                 let n3 = parseFloat(document.getElementById('nota3').value)
 
-                let media = (n1 + n2 + n3) 
+                let media = (n1 + n2 + n3)/3 
 
                 document.getElementById('media').innerHTML = media
 
