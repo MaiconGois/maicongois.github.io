@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Soma</title>
 </head>
+
 <body>
     <h1>Verificar a sua idade</h1>
     <input type="text" placeholder="Digite a sua idade" id="idade">
@@ -14,20 +17,20 @@
 
     <script>
         //Atividade 1
-        function salvar(){
+        function salvar() {
             let idade = document.getElementById('idade').value;
 
-            if(idade<18){
-            document.getElementById('resultidade').innerText = "Você é menor de idade";
-            } else if(idade >= 18 && idade <= 64){
+            if (idade < 18) {
+                document.getElementById('resultidade').innerText = "Você é menor de idade";
+            } else if (idade >= 18 && idade <= 64) {
                 document.getElementById('resultidade').innerText = "Você já é um adulto"
-            }else{
+            } else {
                 document.getElementById('resultidade').innerText = "Você já é um idoso"
-            }  
-            
+            }
+
         }
     </script>
-        
+
     <h1>Comparação dos valores</h1>
     <input type="text" placeholder="Digite o primeiro valor" id="valor1">
     <input type="text" placeholder="Digite o segundo valor" id="valor2">
@@ -36,15 +39,15 @@
 
     <script>
         //Atividade 2
-        function salvar1(){
-            let valor1 = parseFloat (document.getElementById('valor1').value) 
-            let valor2 = parseFloat(document.getElementById('valor2').value) 
+        function salvar1() {
+            let valor1 = parseFloat(document.getElementById('valor1').value)
+            let valor2 = parseFloat(document.getElementById('valor2').value)
 
-            if(valor1 > valor2){
+            if (valor1 > valor2) {
                 document.getElementById('resultcomparacao').innerText = "Esse valor é o maior " + valor1
-            }else if(valor1 < valor2){
+            } else if (valor1 < valor2) {
                 document.getElementById('resultcomparacao').innerText = "Esse valor é o maior " + valor2
-            }else{
+            } else {
                 document.getElementById('resultcomparacao').innerText = "Os valores são iguais"
             }
 
@@ -60,105 +63,144 @@
     <p id="resultdivisao"></p>
     <script>
         //Atividade 3
-        function salvar2(){
+        function salvar2() {
 
             let n1 = document.getElementById('n1').value;
             let n2 = document.getElementById('n2').value;
             let divisao = n1 % n2;
 
-            if(divisao === 0){
+            if (divisao === 0) {
                 document.getElementById('resultdivisao').innerText = "Esse valor é divisível"
 
-            }else{
+            } else {
                 document.getElementById('resultdivisao').innerText = "Esse valor não é divisível"
             }
 
         }
     </script>
 
-<h1>Verificação de temperatura</h1>
-<input type="text" placeholder="Digite a temperatura atual" id="t">
-<button onclick="salvar3()">Salvar</button>
-<p id="resulttemperatura"></p>   
+    <h1>Verificação de temperatura</h1>
+    <input type="text" placeholder="Digite a temperatura atual" id="t">
+    <button onclick="salvar3()">Salvar</button>
+    <p id="resulttemperatura"></p>
 
-<script>
-//Atividade 4
-function salvar3(){
-    let t = document.getElementById('t').value;
+    <script>
+        //Atividade 4
+        function salvar3() {
+            let t = document.getElementById('t').value;
 
-    if(t <= 17.9){
-        document.getElementById('resulttemperatura').innerText = "A temperatura está muito Frio"
-    }else if(t<= 26.9 && t>= 18){
-        document.getElementById('resulttemperatura').innerText = "Está a uma temperatura agradável"
-    }else{
-        document.getElementById('resulttemperatura').innerText = "A temperatura está muito quente"
-    }
-}
+            if (t <= 17.9) {
+                document.getElementById('resulttemperatura').innerText = "A temperatura está muito Frio"
+            } else if (t <= 26.9 && t >= 18) {
+                document.getElementById('resulttemperatura').innerText = "Está a uma temperatura agradável"
+            } else {
+                document.getElementById('resulttemperatura').innerText = "A temperatura está muito quente"
+            }
+        }
 
-</script>
-<h1>Cálculo do fatorisl de um número</h1>
-<input type="text" placeholder="Digite um número" id="fatorial">
-<button onclick="salvar4()">Salvar</button>
-<p id="resultfatorial"></p>   
-
-<script>
+    </script>
 
 
+    <h1>Cálculo do fatorisl de um número</h1>
+    <input type="text" placeholder="Digite um número" id="fatorial">
+    <button onclick="salvar4()">Salvar</button>
+    <p id="resultfatorial"></p>
 
-//Atividade 6
-function salvar4(){
-    let n = document.getElementById('fatorial').value;
-    let resultfatorial = n;
-    for(let i = 1; i< n; i++){
-        resultfatorial = resultfatorial * i;   
-    }
-    document.getElementById('resultfatorial').innerText = resultfatorial
+    <script>
+
+
+
+        //Atividade 6
+        function salvar4() {
+            let n = document.getElementById('fatorial').value;
+            let resultfatorial = n;
+            for (let i = 1; i < n; i++) {
+                resultfatorial = resultfatorial * i;
+            }
+            document.getElementById('resultfatorial').innerText = resultfatorial
+
+        }
+
+    </script>
+    <h1>Contagem regressiva</h1>
+    <input type="text" placeholder="Digite um número" id="contagem">
+    <button onclick="salvar5()">Salvar</button>
+    <p id="resultcontagem"></p>
+
+    <script>
+
+        //Atividade 7
+        function salvar5() {
+            let n = document.getElementById('contagem').value;
+            let resultfatorial = 0;
+            document.getElementById('resultcontagem').innerHTML = "  "
+            while (resultfatorial != 1) {
+                resultfatorial = n--
+
+                document.getElementById('resultcontagem').innerHTML += resultfatorial + " - "
+            }
+
+        }
+
+    </script>
+    <h1>Tabuada de multiplicação</h1>
+    <input type="text" placeholder="Digite um número" id="tabuada">
+    <button onclick="salvar6()">Salvar</button>
+    <p id="resulttabuada"></p>
+
+    <script>
+        //Atividade 8
+        function salvar6() {
+            let n = document.getElementById('tabuada').value;
+            let resulttabuada = " ";
+            for (let i = 1; i <= 10; i++) {
+                document.getElementById('resulttabuada').innerHTML =
+                    resulttabuada += n + " * " + i + " = " + n * i + "<br>"
+            }
+
+        }
+    </script>
     
-}
+    <h1>Verificação de notas</h1>
+    <table class="table">
+        <tr>
+            <th scope="col">Matéria</th>
+            <th scope="col">1º Bimestre</th>
+            <th scope="col">2º Bimestre</th>
+            <th scope="col">3º Bimestre</th>
+            <th scope="col">Média Final</th>
+            <th scope="col">Situação</th>
+        </tr>
 
-</script>
-<h1>Contagem regressiva</h1>
-<input type="text" placeholder="Digite um número" id="contagem">
-<button onclick="salvar5()">Salvar</button>
-<p id="resultcontagem"></p>   
+        <tr>
+            <th scope="row"> Matemática</th>
+            <th><input type="text" placeholder="Digite nota" id="nota1"></th>
+            <th><input type="text" placeholder="Digite nota" id="nota2"></th>
+            <th><input type="text" placeholder="Digite nota" id="nota3"></th>
+            <th id="media"></th>
+            <th id="situacao"></th>
+        </tr>
+        <div class="salvar"><button onclick="salvar7()">Salvar</button></div>
+        <script>
+            function salvar7() {
+                let n1 = parseFloat(document.getElementById('nota1').value)
+                let n2 = parseFloat(document.getElementById('nota2').value)
+                let n3 = parseFloat(document.getElementById('nota3').value)
 
-<script>
+                let media = (n1 + n2 + n3) 
+
+                document.getElementById('media').innerHTML = media
+
+                if(media >= 60){
+                    document.getElementById('situacao').innerHTML = "Aprovado"
+                }else{
+                    document.getElementById('situacao').innerHTML = "Reprovado"
+                }
+
+            }
 
 
-
-
-//Atividade 7
-function salvar5(){
-    let n = document.getElementById('contagem').value;
-    let resultfatorial = 0;
-    
-    while(resultfatorial != 1){
-resultfatorial = n--
-
-        document.getElementById('resultcontagem').innerHTML += resultfatorial + " - "
-    } 
-    
-}
-
-</script>
-<h1>Tabuada de multiplicação</h1>
-<input type="text" placeholder="Digite um número" id="tabuada">
-<button onclick="salvar6()">Salvar</button>
-<p id="resulttabuada"></p>   
-
-<script>
-//Atividade 8
-function salvar6(){
-    let n = document.getElementById('tabuada').value;
-    let resulttabuada = " ";
-    for(let i = 1; i <= 10; i ++){
-        document.getElementById('resulttabuada').innerHTML = 
-        resulttabuada += n + " * "+ i + " = "+ n * i + "<br>"
-    }
-    
-    
-}
-</script>
+        </script>
 
 
 
@@ -169,13 +211,10 @@ function salvar6(){
 
 
 
-
-
-
-
-
-
-
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
 
 </body>
+
 </html>
