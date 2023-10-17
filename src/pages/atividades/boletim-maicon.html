@@ -4,21 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public-bootstrap/css_bootstrap.min.css">
+    <link rel="stylesheet" href="/src/css/style.css">
+    <link rel="stylesheet" href="/articles.css">
+    <link rel="stylesheet" href="/src/pages/atividades/boletim.css">
+    
     <title>Boletim</title>
 </head>
-<body>
+<body id="mmm">
+    
     <!-- ATIVIDADE 5 -->
-    <div class="row">
+    <div class="row ">
         <div class="col-4">
-            <h4>Atividade nº 5</h4>
-            <div class="row-cols-4" id="materia1">
+            <h4>ATIVIDADE Nº 5 REFÊRENTE AO BOLETIM</h4>
+            <div class="row-cols-4 fontedetexto" id="dadosUsuario">
                 <div class="col">
                     <label for="nomeUsuario">Nome do aluno</label>
                     <input type="text" id="nomeUsuario">
                 </div>
                 <div class="col">
-                    <label for="nomeInstituicao">Escola/Instituicao</label>
+                    <label for="nomeInstituicao">Escola/Instituição</label>
                     <input type="text" id="nomeInstituicao">
+                </div>
+                <div class="col">
+                    <label for="ano">Curso</label>
+                    <input type="text" id="curso">
                 </div>
                 <div class="col">
                     <label for="ano">Ano</label>
@@ -28,107 +37,160 @@
                     <label for="professor">Professor</label>
                     <input type="text" id="professor">
                 </div>
-                <div class="col-2 p-md-4">
-                    <label for="nomeMateria">Matéria</label>
-                    <input type="text" id="nomeMateria">
-                </div>
-                <div class="col-2 p-md-4 input-group">
-                    <input type="number">
-                    <input type="number">
-                    <input type="number">
-                    <input type="number">
-                </div>
+                <button onclick="verificarDados()" class="btn btn-primary mt-3">Próximo</button>
             </div>
-            <button onclick="save()">Verificar Notas</button>
-            <p class="m-3 p-2" id="resultNotas"></p>
-        </div>
-    </div>
-<script>
-     let materia = { id: 0, nome: "", notas: [], total: 0, printInfo: "" };
-    let user = {nome: " ", intituicao: " ", ano: 0, professor: " "}
-     
-     let materias = [];
-        function save() {
-            let inputNotas = [];
-            let totalNotas = 0;
-            user.nome = nomeUsuario.value;
-            user.instituicao = nomeInstituicao.value;
-            user.ano = ano.value;
-            user.professor = professor.value;
-            let resultados = `<b>BOLETIM DE: ${user.nome.toLocaleUpperCase()}</b><br><b>INSTITUIÇÃO/ESCOLA:${user.instituicao.toLocaleUpperCase()} </b>
-            <br><b>ANO:${user.ano.toLocaleUpperCase()} </b>
-            <br><b>PROFESSOR:${user.instituicao.toLocaleUpperCase()} </b>
-            <br><b>INSTITUIÇÃO/ESCOLA:${user.instituicao.toLocaleUpperCase()} </b>
-            <br><b>INSTITUIÇÃO/ESCOLA:${user.instituicao.toLocaleUpperCase()} </b>`;
-            document.querySelectorAll("div.input-group input").forEach(e => {
-                inputNotas.push(parseFloat(e.value))
-                totalNotas += parseFloat(e.value);
-            })
+            <div class="row-cols-4" id="materia1" style="display: none;">
+                <div class="col-2 p-md-4">
+                    <label for="materiaDropdown">Matéria</label>
+                    <select id="materiaDropdown" class="form-select selacao" >
+                        <option value="" disabled selected>Selecione a matéria</option>
+                        <option value="Geografia">Geografia</option>
+                        <option value="Física">Física</option>
+                        <option value="Inglês">Inglês</option>
+                        <option value="Biologia">Biologia</option>
+                        <option value="Português">Português</option>
+                        <option value="Sociologia">Sociologia</option>
+                    </select>
+                </div>
+            
+                <div class="form-group">
+                    <label for="notaBim1" style="width: 170px;">1º Bim: </label>
+                    <input type="number" class="form-control" id="notaBim1" placeholder="Nota Bim 1">
+                </div>
+                <div class="form-group">
+                    <label for="notaBim2" style="width: 170px;">2º Bim: </label>
+                    <input type="number" class="form-control" id="notaBim2" placeholder="Nota Bim 2">
+                </div>
+                <div class="form-group">
+                    <label for="notaBim3" style="width: 170px;">3º Bim: </label>
+                    <input type="number" class="form-control" id="notaBim3" placeholder="Nota Bim 3">
+                </div>
+                <div class="form-group">
+                    <label for="notaBim4" style="width: 170px;">4º Bim: </label>
+                    <input type="number" class="form-control" id="notaBim4" placeholder="Nota Bim 4">
+                </div>
+                <button onclick="adicionarNotas()" class="btn btn-primary mt-3">Adicionar Matéria</button>
+            </div>
+                    <div class="m-3 p-2" id="resultNotas" style="display: none;">
+    <script>
+        let materiaId = 1;
+        let materias = [];
+        let user = { nome: "", instituicao: "", curso: 0, ano: 0, professor: "" };
 
-            materias.push(
-                {
-                    id: materia.id++,
-                    nome: nomeMateria.value.toLocaleUpperCase(),
-                    notas: inputNotas,
-                    total: totalNotas,
-                    info: `<hr>
-                            RESULTADO DE: <b>${nomeMateria.value.toLocaleUpperCase()}</b> 
-                            <ul>
-                                <li><b>1º Bimestre:</b> ${inputNotas[0]}</li>
-                                <li><b>2º Bimestre:</b> ${inputNotas[1]}</li>
-                                <li><b>3º Bimestre:</b> ${inputNotas[2]}</li>
-                                <li><b>4º Bimestre:</b> ${inputNotas[3]}</li>
-                                <li>TOTAL FINAL: <b>${totalNotas}</b></li>
-                                <li>STATUS: <b>${isAprovadoOuReprovado(totalNotas)}</b></li>
-                            </ul>
-                            `
-                }
-            )
+        function verificarDados() {
+            user.nome = document.getElementById("nomeUsuario").value;
+            user.instituicao = document.getElementById("nomeInstituicao").value;
+            user.curso = document.getElementById("curso").value;
+            user.ano = document.getElementById("ano").value;
+            user.professor = document.getElementById("professor").value;
 
-            console.log(materias)
+            const missingFields = [];
+            if (!user.nome) missingFields.push("Nome do aluno");
+            if (!user.instituicao) missingFields.push("Escola/Instituição");
+            if (!user.curso) missingFields.push("Curso");
+            if (!user.ano) missingFields.push("Ano");
+            if (!user.professor) missingFields.push("Professor");
+
+            if (missingFields.length > 0) {
+                alert(`Por favor, preencha os seguintes campos: ${missingFields.join(", ")}`);
+                return;
+            }
+
+            // Esconde a seção de dados do usuário
+            document.getElementById("dadosUsuario").style.display = "none";
+            // Mostra a seção de preenchimento de matéria
+            document.getElementById("materia1").style.display = "block";
+        }
+
+        function adicionarNotas() {
+            const materiaDropdown = document.getElementById("materiaDropdown");
+            const materiaSelecionada = materiaDropdown.value;
+            const resultNotas = document.getElementById("resultNotas");
+            resultNotas.style.display = "block";
+           
+            if (materias.some(materia => materia.nome === materiaSelecionada)) {
+                alert("Essa matéria já foi adicionada.");
+                return;
+            }
+
+            const notaBim1 = parseFloat(document.getElementById("notaBim1").value);
+            const notaBim2 = parseFloat(document.getElementById("notaBim2").value);
+            const notaBim3 = parseFloat(document.getElementById("notaBim3").value);
+            const notaBim4 = parseFloat(document.getElementById("notaBim4").value);
+
+            if (isNaN(notaBim1) || isNaN(notaBim2) || isNaN(notaBim3) || isNaN(notaBim4)) {
+                alert("Por favor, preencha todas as notas antes de verificar.");
+                return;
+            }
+
+            if (notaBim1 > 20 || notaBim1 < 0) {
+                alert("A nota do 1º bimestre excedeu o limite permitido (0 a 20).");
+                return;
+            }
+
+            if (notaBim2 > 25 || notaBim2 < 0) {
+                alert("A nota do 2º bimestre excedeu o limite permitido (0 a 25).");
+                return;
+            }
+
+            if (notaBim3 > 25 || notaBim3 < 0) {
+                alert("A nota do 3º bimestre excedeu o limite permitido (0 a 25).");
+                return;
+            }
+
+            if (notaBim4 > 30 || notaBim4 < 0) {
+                alert("A nota do 4º bimestre excedeu o limite permitido (0 a 30).");
+                return;
+            }
+            
+            let resultados = `<b>BOLETIM DE: </b> <p>${user.nome.toLocaleUpperCase()}</p><br>
+            <b>INSTITUIÇÃO/ESCOLA: </b> <p> ${user.instituicao.toLocaleUpperCase()}</p><br>
+            <b>CURSO: </b> <p>${user.curso.toLocaleUpperCase()}</p><br>
+            <b>ANO: </b><p>${user.ano.toLocaleUpperCase()} </p><br>
+            <b>PROFESSOR: </b> <p>${user.professor.toLocaleUpperCase()} </p>`;
+
+            const inputNotas = [notaBim1, notaBim2, notaBim3, notaBim4];
+            const totalNotas = notaBim1 + notaBim2 + notaBim3 + notaBim4;
+
+            materias.push({
+                id: materiaId++,
+                nome: materiaSelecionada,
+                notas: inputNotas,
+                total: totalNotas,
+                info: `<hr>
+                            RESULTADO DE: <b>${materiaSelecionada}</b> 
+                            <table>
+                                <tr><td><b>1º Bimestre:</b></td><td>${notaBim1}</td></tr>
+                                <tr><td><b>2º Bimestre:</b></td><td>${notaBim2}</td></tr>
+                                <tr><td><b>3º Bimestre:</b></td><td>${notaBim3}</td></tr>
+                                <tr><td><b>4º Bimestre:</b></td><td>${notaBim4}</td></tr>
+                                <tr><td><b>TOTAL FINAL:</b></td><td>${totalNotas}</td></tr>
+                                <tr><td><b>STATUS:</b></td><td>${aprovadoOuReprovado(totalNotas)}</td></tr>
+                            </table>`
+            });
+
+            console.log(materias);
 
             materias.forEach(e => {
                 resultados += `<br>` + e.info;
-            })
+            });
 
-            resultNotas.innerHTML = resultados;
+            document.getElementById("resultNotas").innerHTML = resultados;
+
+            // Limpa os campos após adicionar a matéria
+            document.getElementById("materiaDropdown").value = "";
+            document.getElementById("notaBim1").value = "";
+            document.getElementById("notaBim2").value = "";
+            document.getElementById("notaBim3").value = "";
+            document.getElementById("notaBim4").value = "";
         }
-        function isAprovadoOuReprovado(valor) {
-            if (valor >= 60) {
-                return "APROVADO"
-            } else {
-                return "REPROVADO"
-            }
+
+    
+
+        function aprovadoOuReprovado(valor) {
+            return valor >= 60 ? "APROVADO" : "REPROVADO";
         }
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    </script>
 <script src="/public-bootstrap/js_bootstrap.bundle.min.js"></script>
 </body>
 </html>

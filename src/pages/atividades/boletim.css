@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(173, 152, 121, 0.78);
+    margin: 0;
+    padding: 0;
+    font-size: 21px;
+    box-sizing: 0;
+    overflow-x: hidden; 
+    overflow-y: auto;
+}
+h4{
+    box-sizing: 25px;
+    font-size: 35px;
+    font-weight: bold;
+   width: 100%;
+    
+}
+
+.row {
+    justify-content: center;
+    margin-left: 50px;
+    margin-top: 75px;
+    
+}
+.label{
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 10px;
+
+}
+.form-control {
+    width: 100%;
+    text-align: center;
+}
+.form-group{
+    padding: 3px;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    margin-bottom: 12px;
+}
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#resultNotas {
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+}
+
+form input,
+form select {
+ 
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button.btn {
+    padding: 15px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+button.btn:hover {
+    background-color: #0056b3;
+}
+
+hr {
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+.form-select{
+    width: 200px;
+    height: 40px;
+}
