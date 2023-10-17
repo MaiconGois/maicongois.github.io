@@ -15,6 +15,11 @@ h4{
    width: 100%;
     
 }
+h4{
+    margin-top: 35px;
+    width: 700px;
+    height: 95px;
+}
 
 .row {
     justify-content: center;
@@ -26,7 +31,12 @@ h4{
     width: 100%;
     display: inline-block;
     margin-bottom: 10px;
+    width: max-content;
 
+}
+label {
+    display: inline-block;
+    width: max-content;
 }
 .form-control {
     width: 100%;
@@ -80,6 +90,9 @@ button.btn {
     background-color: #007BFF;
     color: white;
     cursor: pointer;
+    height: 60px;
+    width: 150px;
+   
 }
 
 button.btn:hover {
@@ -94,3 +107,13 @@ hr {
     width: 200px;
     height: 40px;
 }
+footer{
+    margin-top: 0;
+    background-color: gainsboro;
+    font-size: 10px;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+  }

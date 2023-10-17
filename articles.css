@@ -20,7 +20,10 @@ body {
     width: 200px;
     height:0;
 }
-
+iframe{
+    background-color: rgba(173, 152, 121, 0.78);
+    
+}
 .left-side-bar button {
     display: block;
     background-color: inherit;

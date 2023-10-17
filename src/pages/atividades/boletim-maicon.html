@@ -10,8 +10,16 @@
     
     <title>Boletim</title>
 </head>
-<body id="mmm">
-    
+<body >
+    <header class="card, header">
+        <nav class="nav-items">
+            <a class="button to-left padding-large" href="/index.html#inicio"><strong ><img class="logoimg" src="/src/imagens/Logo.png" alt="Logo"></strong></a>
+            <a class="button to-right padding-large" href="/index.html#sobre">SOBRE</a>
+            <a class="button to-right padding-large" href="/index.html#projeto">PROJETOS</a>
+            <a class="button to-right padding-large" href="/index.html#artigos">ARTIGOS</a>
+            <a class="button to-right padding-large" href="/index.html#contato">CONTATO</a>
+        </nav>
+    </header>
     <!-- ATIVIDADE 5 -->
     <div class="row ">
         <div class="col-4">
@@ -143,11 +151,15 @@
                 return;
             }
             
-            let resultados = `<b>BOLETIM DE: </b> <p>${user.nome.toLocaleUpperCase()}</p><br>
-            <b>INSTITUIÇÃO/ESCOLA: </b> <p> ${user.instituicao.toLocaleUpperCase()}</p><br>
-            <b>CURSO: </b> <p>${user.curso.toLocaleUpperCase()}</p><br>
-            <b>ANO: </b><p>${user.ano.toLocaleUpperCase()} </p><br>
-            <b>PROFESSOR: </b> <p>${user.professor.toLocaleUpperCase()} </p>`;
+            let resultados = `
+            <table class="table table-striped-columns">
+                <tr><td><b>BOLETIM DE:</b></td><td>${user.nome.toLocaleUpperCase()}</td></tr>
+                <tr><td><b>INSTITUIÇÃO/ESCOLA:</b></td><td>${user.instituicao.toLocaleUpperCase()}</td></tr>
+                <tr><td><b>CURSO:</b></td><td>${user.curso.toLocaleUpperCase()}</td></tr>
+                <tr><td><b>ANO:</b></td><td>${user.ano.toLocaleUpperCase()}</td></tr>
+                <tr><td><b>PROFESSOR:</b></td><td>${user.professor.toLocaleUpperCase()}</td></tr>
+        </table>
+            `
 
             const inputNotas = [notaBim1, notaBim2, notaBim3, notaBim4];
             const totalNotas = notaBim1 + notaBim2 + notaBim3 + notaBim4;
@@ -159,7 +171,7 @@
                 total: totalNotas,
                 info: `<hr>
                             RESULTADO DE: <b>${materiaSelecionada}</b> 
-                            <table>
+                            <table class="table table-striped-columns">
                                 <tr><td><b>1º Bimestre:</b></td><td>${notaBim1}</td></tr>
                                 <tr><td><b>2º Bimestre:</b></td><td>${notaBim2}</td></tr>
                                 <tr><td><b>3º Bimestre:</b></td><td>${notaBim3}</td></tr>
@@ -189,8 +201,12 @@
 
         function aprovadoOuReprovado(valor) {
             return valor >= 60 ? "APROVADO" : "REPROVADO";
-        }
+        } 
+        <footer class="container content center">
+        <p class="center opacity wide">By Maicon Augusto</p>
+    </footer>
     </script>
+    
 <script src="/public-bootstrap/js_bootstrap.bundle.min.js"></script>
 </body>
 </html>
