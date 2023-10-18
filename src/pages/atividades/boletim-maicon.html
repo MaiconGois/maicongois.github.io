@@ -22,42 +22,45 @@
     </header>
     <!-- ATIVIDADE 5 -->
     <div class="row ">
-        <div class="col-4">
+        <div class="col-4" id="esconder">
             <h4>ATIVIDADE Nº 5 REFÊRENTE AO BOLETIM</h4>
-            <div class="row-cols-4 fontedetexto" id="dadosUsuario">
-                <div class="col">
-                    <label for="nomeUsuario">Nome do aluno</label>
-                    <input type="text" id="nomeUsuario">
-                </div>
-                <div class="col">
-                    <label for="nomeInstituicao">Escola/Instituição</label>
-                    <input type="text" id="nomeInstituicao">
-                </div>
-                <div class="col">
-                    <label for="ano">Curso</label>
-                    <input type="text" id="curso">
-                </div>
-                <div class="col">
-                    <label for="ano">Ano</label>
-                    <input type="text" id="ano">
-                </div>
-                <div class="col">
-                    <label for="professor">Professor</label>
-                    <input type="text" id="professor">
-                </div>
-                <button onclick="verificarDados()" class="btn btn-primary mt-3">Próximo</button>
+            <div class="mb-3" id="dadosUsuario">
+                <div class="mb-3">
+                <label for="nomeUsuario" class="form-label">Nome do aluno</label>
+                <input type="text" class="form-control" id="nomeUsuario" >
+              </div>
+              <div class="mb-3">
+                <label for="nomeInstituicao" class="form-label">Escola/Instituição</label>
+                <input type="text" class="form-control" id="nomeInstituicao" >
+              </div>
+              <div class="mb-3">
+                <label for="curso" class="form-label">Curso</label>
+                <input type="text" class="form-control" id="curso" >
+              </div>
+              <div class="mb-3">
+                <label for="ano" class="form-label">Ano</label>
+                <input type="text" class="form-control" id="ano" >
+              </div>
+              <div class="mb-3">
+                <label for="professor" class="form-label">Professor</label>
+                <input type="text" class="form-control" id="professor" >
+              </div>
+              <button onclick="verificarDados()" class="btn btn-primary mt-3">Próximo</button>
             </div>
-            <div class="row-cols-4" id="materia1" style="display: none;">
-                <div class="col-2 p-md-4">
-                    <label for="materiaDropdown">Matéria</label>
-                    <select id="materiaDropdown" class="form-select selacao" >
-                        <option value="" disabled selected>Selecione a matéria</option>
-                        <option value="Geografia">Geografia</option>
-                        <option value="Física">Física</option>
-                        <option value="Inglês">Inglês</option>
-                        <option value="Biologia">Biologia</option>
-                        <option value="Português">Português</option>
-                        <option value="Sociologia">Sociologia</option>
+        </div>
+            <div class="row-cols-1" id="materia1" style="display: none;">
+
+                    <div class="mb-3">
+                        <label for="materiaDropdown" class="form-label">Matéria</label>
+                        <select id="materiaDropdown" class="form-select selacao" >
+                            <option value="" disabled selected>Selecione a matéria</option>
+                            <option value="Geografia">Geografia</option>
+                            <option value="Física">Física</option>
+                            <option value="Inglês">Inglês</option>
+                            <option value="Biologia">Biologia</option>
+                            <option value="Português">Português</option>
+                            <option value="Sociologia">Sociologia</option>
+                        
                     </select>
                 </div>
             
@@ -83,7 +86,7 @@
     <script>
         let materiaId = 1;
         let materias = [];
-        let user = { nome: "", instituicao: "", curso: 0, ano: 0, professor: "" };
+        let user = { nome: "", instituicao: "", curso: "", ano: 0, professor: "" };
 
         function verificarDados() {
             user.nome = document.getElementById("nomeUsuario").value;
@@ -202,11 +205,11 @@
         function aprovadoOuReprovado(valor) {
             return valor >= 60 ? "APROVADO" : "REPROVADO";
         } 
-        <footer class="container content center">
-        <p class="center opacity wide">By Maicon Augusto</p>
-    </footer>
+ 
     </script>
-    
+           <footer class="container content center">
+            <p class="center opacity wide">By Maicon Augusto</p>
+        </footer>
 <script src="/public-bootstrap/js_bootstrap.bundle.min.js"></script>
 </body>
 </html>
