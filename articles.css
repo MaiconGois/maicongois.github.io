@@ -1,5 +1,7 @@
 body {
     background-color: #9599a3;
+    overflow-x: hidden; 
+    overflow-y: auto;
 }
 
 .content-group {
@@ -18,7 +20,10 @@ body {
     width: 200px;
     height:0;
 }
-
+iframe{
+    background-color: rgba(173, 152, 121, 0.78);
+    
+}
 .left-side-bar button {
     display: block;
     background-color: inherit;
@@ -59,18 +64,19 @@ hr{
    
     width: 500vh;
     height: auto;
+    max-height: 100vh;
+    overflow-y: auto; 
 }
 
 section.cardBox {
     color: black;
-    background-color: rgb(173 152 121 / 78%);
+    background-color: rgba(173, 152, 121, 0.78);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
     text-align: center;
-    margin-left: 260px;
-    margin-right: 260px;
-    margin-top: 25px;
+    margin-left: 180px;
+    margin-top: 70px;
     padding: 0px 12px;
-    height: 700px;
+    height: 800px;
     width: 1250px;
     max-width: 1200px;
     max-height: 2090px;
@@ -131,11 +137,10 @@ h3{
 }
 .teste, .teste_1{
     height: 590px;
-    width: 1000px;
+  
     background-color: rgb(244 210 174);
     border-radius: 35px;
-    margin-top: 45px;
-    margin-left: 20%;
+   
 }
 .teste_1{
     height: 720px;

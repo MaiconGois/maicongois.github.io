@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgba(173, 152, 121, 0.78);
+    margin: 0;
+    padding: 0;
+    font-size: 21px;
+    box-sizing: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+h4, .dadosInNo{
+    margin-top: 45px;
+    box-sizing: 25px;
+    font-size: 35px;
+    font-weight: bold;
+   width: 100%;
+   
+}
+.dadosInNo{
+   
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+
+
+
+.row {
+    justify-content: center;
+   
+    margin-top: 55px;
+   
+}
+
+
+.label{
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 10px;
+
+
+}
+.form-control {
+    width: 100%;
+    text-align: center;
+}
+.form-group{
+    padding: 3px;
+    width: 300px;
+    height: 50px;
+    display: flex;
+    margin-bottom: 12px;
+}
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+
+#Notas {
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    display: block;
+    width: 816px;
+    height: 441px;
+}
+th{
+    border-color: inherit;
+    border-style: solid;
+    border-width: 2px;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+
+form label {
+    font-weight: bold;
+    display: block;
+}
+
+
+form input,
+form select {
+ 
+    padding: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+button.btn {
+    padding: 15px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+
+button.btn:hover {
+    background-color: #0056b3;
+}
+
+
+hr {
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+.form-select{
+    width: 200px;
+    height: 40px;
+}
+
+
+#materia1 {
+    width: 50%;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+
+#materiaDropdown {
+    width: 50%;
+    margin: 0 auto; 
+    display: block;
+}
+
+
+#dadosUsuario {
+   
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+#b1234 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+#b1234 .col {
+    margin-bottom: 10px; 
+}
+#espacamento{
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+
+
+  .container-mac {
+      width: 100%;
+      text-align: center;
+      position: relative;
+      padding-left:45%;
+  } 
+  #resultNotas{
+    
+    overflow-y: scroll;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 12px;
+    background-color: #0056b3;
+    border-radius: 12px
+  }
+
+  .tableSty{
+    
+    height: auto;
+    padding: 55px;
+  }
