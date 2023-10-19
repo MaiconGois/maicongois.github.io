@@ -123,6 +123,7 @@ h2 {
 
 .center {
     text-align: center;
+    position: relative;
 }
 
 .padding-32 {
