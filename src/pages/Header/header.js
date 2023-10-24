@@ -19,7 +19,7 @@ function header() {
 
 
     const headerpagina = document.getElementById("headerpagina");
-    headerpagina.innerHTML = `<header class="card header">
+    headerpagina.innerHTML = `<header class=" header">
         <nav class="nav-items">
             <a class="button to-left padding-large" href="${inicio}"><strong><img class="logoimg"
                     src="/src/imagens/Logo.png" alt="Logo"></strong></a>

@@ -73,7 +73,7 @@ nav a:hover {
 }
 
 .container {
-    padding: 0.01em 16px;
+    padding: 0.01em;
     justify-content: center;
     align-items: center;
 }
