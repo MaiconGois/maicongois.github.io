@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
+   
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public-bootstrap/css_bootstrap.min.css">
-    <link rel="stylesheet" href="/src/css/style.css">
     <link rel="stylesheet" href="/articles.css">
+    <link rel="stylesheet" href="/src/pages/Header/header.css">
+    <link rel="stylesheet" href="/src/pages/Fooder/fooder.css">
     <link rel="stylesheet" href="/src/pages/atividades/boletim.css">
+    <link rel="stylesheet" href="/src/css/style.css">
 
 
     <title>Boletim</title>
@@ -16,16 +18,7 @@
 
 
 <body>
-    <header class="card, header">
-        <nav class="nav-items">
-            <a class="button to-left padding-large" href="/index.html#inicio"><strong><img class="logoimg"
-                        src="/src/imagens/Logo.png" alt="Logo"></strong></a>
-            <a class="button to-right padding-large" href="/index.html#sobre">SOBRE</a>
-            <a class="button to-right padding-large" href="/index.html#projeto">PROJETOS</a>
-            <a class="button to-right padding-large" href="/index.html#artigos">ARTIGOS</a>
-            <a class="button to-right padding-large" href="/index.html#contato">CONTATO</a>
-        </nav>
-    </header>
+    <div id="headerpagina"></div>
     <!-- ATIVIDADE 5 -->
     <div class="row">
         <div class="col-4">
@@ -283,12 +276,10 @@
 
 
         </script>
-      <div style="text-align: center;">
-      <footer  class="container content center">
-            <p class="center opacity wide">By Maicon Augusto</p>
-        </footer>
-    </div>
+      <div id="footerElement"></div>
         <script src="/public-bootstrap/js_bootstrap.bundle.min.js"></script>
+        <script src="/src/pages/Header/header.js"></script>
+        <script src="/src/pages/Fooder/fooder.js"></script>
 </body>
 
 

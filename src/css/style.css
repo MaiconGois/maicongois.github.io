@@ -17,16 +17,7 @@ body {
     width: 108px;
     height: 35px;
 }
-.header {
-    top: 0;
-    background-color:#4f2621;
-    color: #faefc2;
-    /* height: 50px; */
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    display: block;
-}
+
 
 nav {
     overflow: hidden;
@@ -256,13 +247,3 @@ section{
   color: #e6cbb6;
 }
 
-footer{
-  margin-top: 0;
-  background-color: gainsboro;
-  font-size: 10px;
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  
-}
