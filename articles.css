@@ -102,7 +102,7 @@ section.cardBox {
         
 }
 
-.img, .img_1{
+.img, .img_1, .img_2{
     width: 300px;
     align-items: center;
     padding: 12px;
@@ -110,7 +110,7 @@ section.cardBox {
     border-radius: 50px;
 
 }
-.img, .img_1, p{
+.img, .img_1, .img_2 p{
     display: inline-block;
     font-size: 20px;
 }
@@ -118,6 +118,10 @@ section.cardBox {
     width: 350px;
     height: 350px;
 
+}
+.img_2{
+    width: 95%;
+    height: 100%;
 }
 .P{
 margin-top: 20px;
